@@ -17,13 +17,26 @@ public class P1_5 {
     public static void printByLarging(int size) {
         String text = "#";
         int counter = size * (size + 1) / 2;
-        for (int i = 1; i <= size;i++) {
+        for (int i = 1; i <= size; i++) {
             counter -= i;
             System.out.println(" ".repeat(counter) + text.repeat(i));
         }
     }
 
+    public static void printBridge(int size) {
+        String text = "#";
+        int counter = 0;
+        int empty = 0;
+        for (int i = 1; i <= size - counter; counter++, empty +=i, i++) {
+            if (i == 1)
+                System.out.println(text.repeat(size));
+            else {
+                System.out.println("#".repeat(size-i) + " ".repeat(empty) + "#".repeat(size - i));
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        printByLarging(5);
+        printBridge(5);
     }
 }
