@@ -7,7 +7,7 @@ public class K1_7 {
         double k = 78;
         System.out.println(bmiGrade(calculateBmi(k, p)));
 
-    }   
+    }
 
     private static double calculateBmi(double kg, double m) {
         double bmi = (kg / (Math.pow(m, 2)));
